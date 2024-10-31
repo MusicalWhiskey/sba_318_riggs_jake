@@ -4,7 +4,7 @@
   <title>Posts</title>
   <link rel="stylesheet" href="styles.css"></head>
 <body>
-  <h1>Random People Say Random Thing. What you say?</h1>
+  <h1>Random People Say Random Thing Below.....</h1>
   <ul>
     <% posts.forEach(post => { %>
       <li>
@@ -13,7 +13,7 @@
       </li>
     <% }); %>
   </ul>
-  <h2>Contribute?</h2>
+  <h2>What You Say?</h2>
   <form action="/posts" method="POST">
     <label for="title">Headline:</label>
     <input type="text" id="title" name="title" required>
