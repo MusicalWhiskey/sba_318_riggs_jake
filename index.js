@@ -4,6 +4,7 @@ import accountsRouter from "./routes/accounts.js";
 import postsRouter from "./routes/posts.js";
 import usersRouter from "./routes/users.js";
 
+
 const app = express();
 app.set('view engine', 'ejs');
 app.use(express.static("public"));
@@ -19,7 +20,6 @@ const posts = [
   { id: 5, userId: 1, postId: 3, content: "BeepBoopBeepBoop" },
   { id: 6, userId: 2, postId: 3, content: "I I I.....Want to Rock n Roll All Nigh I I t...." }
 ];
-export default posts;
 
 app.use("/users", usersRouter);
 app.use("/posts", postsRouter);
@@ -39,7 +39,7 @@ app.get("/", (req, res) => {
   res.render('index', { posts: posts });
 });
 
-
+export default posts;
 
 //404 Error Handler
 app.use((req, res) => {

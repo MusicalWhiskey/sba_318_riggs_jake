@@ -7,8 +7,8 @@ const router = express.Router();
 
 
 router.get('/', (req, res) => {
-    res.send(posts);
-})
+  res.render('index', { posts: posts });
+});
 
 router.get('/', (req, res) => {
     const { userId } = req.query;
@@ -23,7 +23,7 @@ router.get('/', (req, res) => {
   });
 
 
-router.get('/:id', (req, res) => {
+router.get('/:id', (req, res) => {s
     const id = req.params.id;
     const post = posts.find(post => post.id === parseInt(id));
     if (posts) {
@@ -34,10 +34,10 @@ router.get('/:id', (req, res) => {
 })
 
 router.post('/', (req, res) => {
-    const newPost = req.body;
-    posts.push(newPost);
-    res.send(newPost);
-  })
+  const newPost = req.body;
+  posts.push(newPost);
+  res.render('index', { posts: posts, newPost: newPost });
+});
 
 router.delete('/:id', (req, res) => {
     const id = req.params.id;

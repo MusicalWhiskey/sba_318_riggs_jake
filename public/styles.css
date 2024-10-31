@@ -57,3 +57,12 @@ textarea {
   #id {
     color:lawngreen
   }
+
+  button {
+    background-color: lawngreen;
+    color: black;
+    border-radius: 4px;
+    padding: 8px 16px;
+    text-decoration: none;
+    font-weight: bold;
+  }
