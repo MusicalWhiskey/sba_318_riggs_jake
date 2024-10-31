@@ -39,7 +39,6 @@ app.get("/", (req, res) => {
   res.render('index', { posts: posts });
 });
 
-export default posts;
 
 //404 Error Handler
 app.use((req, res) => {
