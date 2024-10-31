@@ -4,18 +4,16 @@ const users = [
       name: {
         first: "Ro",
         last: "Bot",
-        display: "Robot 1"
-      },
-      email: "boopitybot@gen.com",
+        displayName: "boopitybot1"
+      }
     },
     {
       id: 2,
       name: {
         first: "Rob",
         last: "Ot",
-        display: "Robot 2"
-      },
-      email: "boopitybotbot@gen.com",
+        displayName: "boopitybot2"
+      }
     }
   ];
   
