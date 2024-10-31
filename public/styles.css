@@ -4,7 +4,11 @@ body {
   }
   
   h1 {
-    color: #00698f;
+    color:lawngreen
+  }
+
+  h2 {
+    color:lawngreen
   }
   
   ul {
@@ -18,7 +22,7 @@ body {
   }
   
   li h2 {
-    color: #00698f;
+    color:lawngreen
   }
   
   li p {
