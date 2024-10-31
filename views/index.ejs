@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Posts</title>
+  <link rel="stylesheet" href="../public/styles.css">
+</head>
+<body>
+  <h1>Random People Say Random Thing. What you say?</h1>
+  <ul>
+    <% posts.forEach(post => { %>
+      <li>
+        <h2><%= post.title %></h2>
+        <p><%= post.content %></p>
+      </li>
+    <% }); %>
+  </ul>
+  <h2>Contribute?</h2>
+  <form action="/posts" method="POST">
+    <label for="title">Headline:</label>
+    <input type="text" id="title" name="title" required>
+    <label for="content">Content:</label>
+    <textarea id="content" name="content" required></textarea>
+    <button type="submit">Create Post</button>
+  </form>
+</body>
+</html>

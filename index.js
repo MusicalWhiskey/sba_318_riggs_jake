@@ -5,11 +5,21 @@ import postsRouter from "./routes/posts.js";
 import usersRouter from "./routes/users.js";
 
 const app = express();
-app.set("view engine", "ejs");
+app.set('view engine', 'ejs');
 app.use(express.static("public"));
 const PORT = process.env.PORT || 3000;
 
 app.use(express.json());
+
+const posts = [
+  { id: 1, userId: 1, postId: 1, content: "Hey there! This is a posty post. Check it out!" },
+  { id: 2, userId: 2, postId: 1, content: "This is also a posty post. Don't look at it though!" },
+  { id: 3, userId: 1, postId: 2, content: "This is another post. I'm not sure what to put here." },
+  { id: 4, userId: 2, postId: 2, content: "Woogity Woogity Woogity" },
+  { id: 5, userId: 1, postId: 3, content: "BeepBoopBeepBoop" },
+  { id: 6, userId: 2, postId: 3, content: "I I I.....Want to Rock n Roll All Nigh I I t...." }
+];
+export default posts;
 
 app.use("/users", usersRouter);
 app.use("/posts", postsRouter);
@@ -26,7 +36,7 @@ app.use((req, res, next) => {
 //Homepage
 app.get("/", (req, res) => {
 	
-  res.send("Hey there! Welcome to the nothing page!");
+  res.render('index', { posts: posts });
 });
 
 
