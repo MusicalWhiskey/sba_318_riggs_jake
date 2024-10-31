@@ -1,6 +1,7 @@
 body {
     font-family: Arial, sans-serif;
     margin: 20px;
+    background-color: #000;
   }
   
   h1 {
@@ -27,4 +28,32 @@ body {
   
   li p {
     color: #666;
+  }
+
+  label {
+    color:lawngreen
+  }
+
+  input[type="text"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid lawngreen;
+    color: lawngreen;
+    background-color: black;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+
+textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid lawngreen;
+    color: lawngreen;
+    background-color: black;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+
+  #id {
+    color:lawngreen
   }
