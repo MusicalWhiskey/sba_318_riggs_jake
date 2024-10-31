@@ -1,7 +1,7 @@
 import express from 'express'
 import users from '../data/users.js'
-// import posts from '../data/posts.js'
-// import accounts from '../data/accounts.js'
+import posts from '../data/posts.js'
+import accounts from '../data/accounts.js'
 
 const router = express.Router();
 
