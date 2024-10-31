@@ -5,9 +5,23 @@ import accounts from '../data/accounts.js'
 
 const router = express.Router();
 
+
 router.get('/', (req, res) => {
     res.send(posts);
 })
+
+router.get('/', (req, res) => {
+    const { userId } = req.query;
+    let filteredPosts = posts;
+  
+    if (userId) {
+      filteredPosts = filteredPosts.filter(post => post.userId === parseInt(userId));
+    }
+  
+    res.send(filteredPosts);
+    next();
+  });
+
 
 router.get('/:id', (req, res) => {
     const id = req.params.id;
@@ -36,11 +50,5 @@ router.delete('/:id', (req, res) => {
     }
   })
 
-//   const userId = req.query;
-//   let filteredPosts = posts;
-
-//   if (userId) {
-//     filteredPosts = filteredPosts.filter(post => post.userId === parseInt(userId));
-//   };
 
 export default router
