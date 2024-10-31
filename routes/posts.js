@@ -19,4 +19,21 @@ router.get('/:id', (req, res) => {
     }
 })
 
+router.post('/', (req, res) => {
+    const newPost = req.body;
+    posts.push(newPost);
+    res.send(newPost);
+  })
+
+router.delete('/:id', (req, res) => {
+    const id = req.params.id;
+    const index = posts.findIndex(post => post.id === parseInt(id));
+    if (index !== -1) {
+      posts.splice(index, 1);
+      res.send({ message: 'Post deleted successfully' });
+    } else {
+      res.status(404).send({ error: 'Post not found' });
+    }
+  })
+
 export default router

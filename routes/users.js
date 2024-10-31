@@ -18,4 +18,11 @@ router.get('/:id', (req, res) => {
         res.status(404).send({ error: 'User not found' });
     }
 })
+
+router.post('/', (req, res) => {
+    const newUser = req.body;
+    users.push(newUser);
+    res.send(newUser);
+  })
+  
 export default router

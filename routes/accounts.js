@@ -19,4 +19,22 @@ router.get('/:id', (req, res) => {
     }
 });
 
+router.post('/', (req, res) => {
+    const newAccount = req.body;
+    accounts.push(newAccount);
+    res.send(newAccount);
+  })
+
+  router.patch('/:id', (req, res) => {
+    const id = req.params.id;
+    const updatedAccount = req.body;
+    const index = accounts.findIndex(account => account.id === parseInt(id));
+    if (index !== -1) {
+      accounts[index] = { ...accounts[index], ...updatedAccount };
+      res.send(accounts[index]);
+    } else {
+      res.status(404).send({ error: 'Account not found' });
+    }
+  })
+
 export default router

@@ -9,7 +9,8 @@ app.set("view engine", "ejs");
 app.use(express.static("public"));
 const PORT = process.env.PORT || 3000;
 
-app.use(express.json()); //parsing request bodies
+app.use(express.json());
+
 
 app.use("/users", usersRouter);
 app.use("/posts", postsRouter);
