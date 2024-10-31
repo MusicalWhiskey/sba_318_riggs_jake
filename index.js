@@ -26,8 +26,10 @@ app.use((req, res, next) => {
 //Homepage
 app.get("/", (req, res) => {
 	
-  res.send("Hey there! Welcome to the nothing page");
+  res.send("Hey there! Welcome to the nothing page!");
 });
+
+
 
 //404 Error Handler
 app.use((req, res) => {

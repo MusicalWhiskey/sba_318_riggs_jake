@@ -1,17 +1,17 @@
 import express from 'express'
-import data from '../data/users.js'
+import users from '../data/users.js'
 import posts from '../data/posts.js'
 import accounts from '../data/accounts.js'
 
 const router = express.Router();
 
-router.get('/', (req, res) => {
-    res.send({ data: "User data here" });
+router.get('/users', (req, res) => {
+    res.send(users);
 })
 
-router.get('/:id', (req, res) => {
+router.get('/users/:id', (req, res) => {
     const query = req.query
-    res.send({ data: "User data here" });
+    res.send(users);
 })
 
 export default router
