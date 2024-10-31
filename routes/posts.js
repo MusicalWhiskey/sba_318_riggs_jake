@@ -36,4 +36,11 @@ router.delete('/:id', (req, res) => {
     }
   })
 
+//   const userId = req.query;
+//   let filteredPosts = posts;
+
+//   if (userId) {
+//     filteredPosts = filteredPosts.filter(post => post.userId === parseInt(userId));
+//   };
+
 export default router
