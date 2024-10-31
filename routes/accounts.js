@@ -1,11 +1,10 @@
 import express from 'express';
-import data from '../data/posts.js'
+import data from '../data/accounts.js'
 import users from '../data/users.js'
-import accounts from '../data/accounts.js'
-
+import posts from '../data/posts.js'
 const router = express.Router();
 
-router.get('/post/:id', (req, res) => {
+router.get('/accounts/:id', (req, res) => {
     res.send({ data: "Post data here" });
 });
 
