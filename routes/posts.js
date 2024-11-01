@@ -27,7 +27,8 @@ router.post('/', (req, res) => {
     postId: 1,
     content: req.body.content
   };
-  posts.unshift(newPost);
+  posts.shift(); // remove the first post from the array
+  posts.push(newPost); // add the new post to the end of the array
   res.render('index', { posts: posts });
 });
 
